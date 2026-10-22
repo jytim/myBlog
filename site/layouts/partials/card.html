@@ -1,0 +1,7 @@
+<a class="card" href="{{ .RelPermalink }}">
+  {{ with .Resources.GetMatch "cover.*" }}<img src="{{ .RelPermalink }}" alt="" loading="lazy">{{ end }}
+  <div class="card-body">
+    <h3>{{ .Title }}</h3>
+    {{ with .Description }}<p>{{ . }}</p>{{ end }}
+  </div>
+</a>

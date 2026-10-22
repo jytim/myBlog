@@ -1,0 +1,11 @@
+{{ define "main" }}
+<article>
+  <h1>{{ .Title }}</h1>
+  <p class="meta">
+    {{ range .Params.tags }}<span class="tag">#{{ . }}</span> {{ end }}
+    {{ with .Params.link }}<a href="{{ . }}">查看專案 ↗</a>{{ end }}
+  </p>
+  {{ with .Resources.GetMatch "cover.*" }}<img class="cover" src="{{ .RelPermalink }}" alt="{{ $.Title }}">{{ end }}
+  <div class="content">{{ .Content }}</div>
+</article>
+{{ end }}

@@ -1,0 +1,28 @@
+baseURL = "http://localhost:1313/"
+languageCode = "zh-tw"
+defaultContentLanguage = "zh-tw"
+title = "我的網站"
+pagination.pagerSize = 10
+
+[params]
+  description = "文章與作品集"
+  author = "你的名字"
+  tagline = "寫作、設計、做東西。"
+  email = ""
+  github = ""
+
+[markup.highlight]
+  noClasses = false
+
+[[menus.main]]
+  name = "文章"
+  url = "/posts/"
+  weight = 10
+[[menus.main]]
+  name = "作品集"
+  url = "/portfolio/"
+  weight = 20
+[[menus.main]]
+  name = "關於"
+  url = "/about/"
+  weight = 30

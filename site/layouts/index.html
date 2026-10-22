@@ -1,0 +1,22 @@
+{{ define "main" }}
+<section class="hero">
+  <h1>{{ site.Params.author }}</h1>
+  <p>{{ site.Params.tagline }}</p>
+</section>
+
+<section>
+  <h2>最新文章</h2>
+  <ul class="post-list">
+    {{ range first 5 (where site.RegularPages "Section" "posts") }}{{ partial "post-item.html" . }}{{ end }}
+  </ul>
+  <p><a href="/posts/">所有文章 →</a></p>
+</section>
+
+<section>
+  <h2>精選作品</h2>
+  <div class="grid">
+    {{ range first 6 (where site.RegularPages "Section" "portfolio") }}{{ partial "card.html" . }}{{ end }}
+  </div>
+  <p><a href="/portfolio/">所有作品 →</a></p>
+</section>
+{{ end }}
