@@ -1,5 +1,5 @@
 baseURL = "http://localhost:1313/"
-languageCode = "zh-tw"
+locale = "zh-tw"
 defaultContentLanguage = "zh-tw"
 title = "我的網站"
 pagination.pagerSize = 10
